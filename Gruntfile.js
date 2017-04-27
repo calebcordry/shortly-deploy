@@ -61,9 +61,7 @@ module.exports = function(grunt) {
 
     shell: {
       prodServer: {
-        push: {
-          command: 'git push live master'
-        }
+        command: 'git push live master'
       }
     },
   });
@@ -92,7 +90,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['concat', 'uglify',
   ]);
 
-  grunt.registerTask('push', ['shell:prodServer:push']);
+  grunt.registerTask('push', ['shell:prodServer']);
 
   grunt.registerTask('upload', function(n) {
     if (grunt.option('prod')) {
